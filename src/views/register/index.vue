@@ -159,8 +159,8 @@
     },
     beforeDestroy() {
       document.body.style.overflow = 'auto'
-      this.getPhoneIntval = null
       clearInterval(this.getPhoneIntval)
+      this.getPhoneIntval = null
     },
     methods: {
       getPhoneCode() {
@@ -176,8 +176,8 @@
             n--
             this.phoneCode = '重新获取(' + n + 's)'
           } else {
-            this.getPhoneIntval = null
             clearInterval(this.getPhoneIntval)
+            this.getPhoneIntval = null
             this.phoneCode = '获取验证码'
             this.isGetphone = false
           }
